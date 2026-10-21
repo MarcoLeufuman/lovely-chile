@@ -1,0 +1,416 @@
+/* Piezas reutilizables: botones, logo, precios, galería, testimonios, preguntas, tips y pasos. */
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  padding: var(--space-3) var(--space-5);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--step--1);
+}
+
+.btn--whatsapp {
+  color: #fff;
+  background-color: var(--color-green-strong);
+}
+
+.btn--ghost {
+  color: var(--color-pink-strong);
+  background-color: transparent;
+  border-color: currentColor;
+}
+
+/* ---------- Logo ---------- */
+
+.logo--small {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.logo__disc {
+  fill: var(--color-pink);
+}
+
+.logo__inner {
+  fill: var(--color-surface);
+}
+
+.logo__ring {
+  fill: none;
+  stroke: var(--color-pink);
+  stroke-width: 2.5;
+}
+
+.logo__word {
+  font-family: var(--font-script);
+}
+
+.logo__word--top {
+  font-size: 46px;
+  fill: var(--color-pink-strong);
+}
+
+.logo__word--bottom {
+  font-size: 40px;
+  fill: var(--color-purple);
+}
+
+.logo__heart {
+  fill: var(--color-green);
+}
+
+.logo__signature {
+  font-family: var(--font-signature);
+  font-size: 17px;
+  font-weight: 700;
+  fill: var(--color-purple);
+}
+
+/* ---------- Precios ---------- */
+
+.price-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-5);
+}
+
+.price-group {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background-color: var(--color-bg);
+  border-top: 6px solid var(--color-pink);
+  border-radius: var(--radius-lg);
+}
+
+.price-group h3 {
+  font-size: var(--step-1);
+}
+
+.price-group .btn {
+  justify-self: start;
+}
+
+.price-group--promo {
+  background-color: #fff8e6;
+  border-top-color: var(--color-gold);
+}
+
+.price-group__note {
+  font-size: var(--step--1);
+  color: var(--color-text-soft);
+}
+
+.prices {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.price-row__dots {
+  flex: 1;
+  min-width: var(--space-4);
+  border-bottom: 2px dotted rgb(123 44 191 / 0.35);
+}
+
+.price-row strong {
+  flex-shrink: 0;
+  color: var(--color-pink-strong);
+}
+
+.helper {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink-strong));
+  border-radius: var(--radius-lg);
+}
+
+/* ---------- Galería y marcadores de foto ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* Marcador visible mientras no hay foto real: misma proporción que tendrá la imagen */
+.placeholder {
+  display: grid;
+  place-content: center;
+  gap: var(--space-1);
+  aspect-ratio: 4 / 5;
+  padding: var(--space-3);
+  text-align: center;
+  color: var(--color-text-soft);
+  background-color: var(--color-surface);
+  border: 2px dashed rgb(214 0 111 / 0.35);
+  border-radius: var(--radius-md);
+}
+
+.placeholder span {
+  font-weight: 800;
+}
+
+.placeholder figcaption {
+  font-size: var(--step--1);
+  word-break: break-word;
+}
+
+.placeholder--video {
+  border-color: rgb(123 44 191 / 0.45);
+}
+
+.placeholder--compare {
+  border-color: rgb(43 182 115 / 0.6);
+}
+
+/* ---------- Sobre Katherine ---------- */
+
+.about {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.about .placeholder--portrait {
+  max-width: 22rem;
+  width: 100%;
+  justify-self: center;
+}
+
+@media (min-width: 48rem) {
+  .about {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  padding-left: var(--space-5);
+  background: radial-gradient(circle at 0.4rem 0.75em, var(--color-green) 0.3rem, transparent 0.32rem) no-repeat;
+}
+
+/* ---------- Testimonios ---------- */
+
+/* Fila deslizable con el dedo, como las historias */
+.testimonials {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(85%, 22rem);
+  gap: var(--space-4);
+  padding: 0 0 var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  list-style: none;
+}
+
+.testimonials > li {
+  scroll-snap-align: start;
+}
+
+.testimonial {
+  display: grid;
+  gap: var(--space-3);
+  height: 100%;
+  margin: 0;
+  padding: var(--space-5);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.testimonial p {
+  font-size: var(--step-1);
+  line-height: 1.4;
+}
+
+.testimonial footer {
+  font-weight: 800;
+  color: var(--color-pink-strong);
+}
+
+.testimonial--pending {
+  color: var(--color-text-soft);
+  background-color: transparent;
+  border: 2px dashed rgb(214 0 111 / 0.35);
+  box-shadow: none;
+}
+
+.testimonial--pending p {
+  font-size: var(--step-0);
+}
+
+/* ---------- Preguntas frecuentes ---------- */
+
+.faq-title {
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-4);
+  color: var(--color-purple);
+}
+
+.faq {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.faq__item {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--tap-min);
+  padding: var(--space-3) var(--space-4);
+  font-weight: 800;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-pink-strong);
+}
+
+.faq__item[open] summary::after {
+  content: "–";
+}
+
+.faq__item p {
+  padding: 0 var(--space-4) var(--space-4);
+  color: var(--color-text-soft);
+}
+
+/* ---------- Tips ---------- */
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.post-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+}
+
+.post-card__tag {
+  font-size: var(--step--1);
+  font-weight: 800;
+  color: var(--color-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.post-card__soon {
+  font-size: var(--step--1);
+  color: var(--color-text-soft);
+}
+
+/* ---------- Pasos para reservar ---------- */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+
+.step__number {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  background-color: var(--color-gold);
+  border-radius: 50%;
+}
+
+.cta-box {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  font-size: var(--step-1);
+  font-weight: 800;
+  text-align: center;
+}
