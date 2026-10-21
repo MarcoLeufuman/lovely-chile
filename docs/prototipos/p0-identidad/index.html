@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>P0 · Identidad visual — Lovely Chile</title>
+  <meta name="description" content="Prototipo de identidad visual del sitio de Lovely Chile: logo, colores, tipografía y animaciones.">
+
+  <!-- Solo en el prototipo: en el sitio real las fuentes van alojadas en assets/fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Grand+Hotel&family=Nunito:wght@400;600;800&family=Pacifico&family=Poppins:wght@400;600;700&display=swap">
+
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="p0.css">
+  <script src="p0.js" defer></script>
+</head>
+<body>
+  <header class="intro">
+    <div class="container">
+      <p class="intro__tag">Prototipo P0 · Identidad visual</p>
+      <h1>Así se vería Lovely Chile en su página</h1>
+      <p class="intro__lead">Aquí están el logo, los colores, las letras y el movimiento que proponemos para el sitio. Todavía no es la página: es para decidir juntos cómo se va a ver y sentir.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="block" aria-labelledby="logo-title">
+      <div class="block__head">
+        <h2 id="logo-title">1. Logo</h2>
+        <p>Recreación del sello de Instagram. Se ajusta comparándolo con la imagen original.</p>
+      </div>
+
+      <div class="logo-stage">
+        <svg class="logo" viewBox="0 0 240 240" role="img" aria-labelledby="logo-name">
+          <title id="logo-name">Lovely Chile by Katherine L.</title>
+          <circle class="logo__disc" cx="120" cy="120" r="116" />
+          <circle class="logo__inner" cx="120" cy="120" r="100" />
+          <circle class="logo__ring" cx="120" cy="120" r="92" pathLength="1" />
+          <text class="logo__word logo__word--top" x="120" y="112" text-anchor="middle">lovely</text>
+          <text class="logo__word logo__word--bottom" x="120" y="152" text-anchor="middle">chile</text>
+          <path class="logo__heart logo__heart--left" d="M42 138s-11-6.8-14.6-13.6A8.3 8.3 0 0 1 42 116.6a8.3 8.3 0 0 1 14.6 7.8C53 131.2 42 138 42 138z" />
+          <path class="logo__heart logo__heart--right" d="M198 138s-11-6.8-14.6-13.6a8.3 8.3 0 0 1 14.6-7.8 8.3 8.3 0 0 1 14.6 7.8c-3.6 6.8-14.6 13.6-14.6 13.6z" />
+          <text class="logo__signature" x="120" y="184" text-anchor="middle">by Katherine L.</text>
+        </svg>
+        <button class="btn btn--ghost" type="button" data-logo-replay>Ver animación otra vez</button>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="colors-title">
+      <div class="block__head">
+        <h2 id="colors-title">2. Colores</h2>
+        <p>Colores vivos sacados del logo y del studio: el rosa de la marca, el morado, el verde de los corazones y el dorado de las lucecitas.</p>
+      </div>
+
+      <ul class="swatches" role="list">
+        <li class="swatch swatch--pink">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Rosa Lovely</strong>
+          <code>#FF2E93</code>
+          <span>Fondos, detalles y títulos grandes</span>
+        </li>
+        <li class="swatch swatch--pink-strong">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Rosa intenso</strong>
+          <code>#D6006F</code>
+          <span>Botones y textos rosados (se lee bien)</span>
+        </li>
+        <li class="swatch swatch--purple">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Morado</strong>
+          <code>#7B2CBF</code>
+          <span>Títulos, enlaces y acentos</span>
+        </li>
+        <li class="swatch swatch--green">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Verde corazón</strong>
+          <code>#2BB673</code>
+          <span>Detalles e íconos</span>
+        </li>
+        <li class="swatch swatch--green-strong">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Verde intenso</strong>
+          <code>#1F7A4D</code>
+          <span>Botón de WhatsApp</span>
+        </li>
+        <li class="swatch swatch--gold">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Dorado</strong>
+          <code>#FFC857</code>
+          <span>Promociones y brillos</span>
+        </li>
+        <li class="swatch swatch--bg">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Rosa suave</strong>
+          <code>#FFF0F6</code>
+          <span>Fondo de la página</span>
+        </li>
+        <li class="swatch swatch--text">
+          <span class="swatch__chip" aria-hidden="true"></span>
+          <strong>Casi negro</strong>
+          <code>#1A1A1A</code>
+          <span>Textos</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="type-title">
+      <div class="block__head">
+        <h2 id="type-title">3. Letras</h2>
+        <p>Elige una opción en cada grupo y mira el cambio en el ejemplo.</p>
+      </div>
+
+      <div class="type-picker">
+        <fieldset class="choice" data-font-group="--font-script">
+          <legend>Letra del logo y los títulos especiales</legend>
+          <label class="choice__option">
+            <input type="radio" name="font-script" value='"Pacifico", cursive' checked>
+            <span class="choice__label choice__label--pacifico">Pacifico</span>
+          </label>
+          <label class="choice__option">
+            <input type="radio" name="font-script" value='"Dancing Script", cursive'>
+            <span class="choice__label choice__label--dancing">Dancing Script</span>
+          </label>
+          <label class="choice__option">
+            <input type="radio" name="font-script" value='"Grand Hotel", cursive'>
+            <span class="choice__label choice__label--grand">Grand Hotel</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="choice" data-font-group="--font-body">
+          <legend>Letra de los textos</legend>
+          <label class="choice__option">
+            <input type="radio" name="font-body" value='"Nunito", system-ui, sans-serif' checked>
+            <span class="choice__label choice__label--nunito">Nunito (redondeada)</span>
+          </label>
+          <label class="choice__option">
+            <input type="radio" name="font-body" value='"Poppins", system-ui, sans-serif'>
+            <span class="choice__label choice__label--poppins">Poppins (geométrica)</span>
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-sample__script">lovely chile</p>
+        <h3>Pestañas que te duran semanas</h3>
+        <p>Tu lugar seguro en Providencia. Extensiones, uñas y cejas con resultados naturales y duraderos.</p>
+        <p class="price-row"><span>Volumen 4D</span><span class="price-row__dots" aria-hidden="true"></span><strong>$31.000</strong></p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="motion-title">
+      <div class="block__head">
+        <h2 id="motion-title">4. Movimiento</h2>
+        <p>Animaciones suaves que acompañan, sin hacer esperar a nadie. Prueba cada una.</p>
+      </div>
+
+      <label class="motion-toggle">
+        <input type="checkbox" data-motion-toggle>
+        <span>Ver sin animaciones (así lo ve quien tiene activado "reducir movimiento" en su teléfono)</span>
+      </label>
+
+      <div class="demo">
+        <h3 class="demo__title">Corazones al reservar</h3>
+        <p class="demo__note">En el sitio, este botón abre WhatsApp con el mensaje listo.</p>
+        <div class="hearts-wrap">
+          <button class="btn btn--whatsapp" type="button" data-hearts>
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.6.5-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z"/></svg>
+            Reservar por WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3 class="demo__title">Cambio de categoría en los precios</h3>
+        <div class="tabs">
+          <div class="tabs__list" role="tablist" aria-label="Categorías de pestañas">
+            <button class="tabs__tab" type="button" role="tab" id="tab-clasico" aria-controls="panel-clasico" aria-selected="true">Volumen clásico</button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-tech" aria-controls="panel-tech" aria-selected="false" tabindex="-1">Volumen tecnológico</button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-natural" aria-controls="panel-natural" aria-selected="false" tabindex="-1">Clásicas o naturales</button>
+          </div>
+
+          <ul class="tabs__panel prices" id="panel-clasico" role="tabpanel" aria-labelledby="tab-clasico">
+            <li class="price-row" data-service="Híbridas" data-price="30000"><span>Híbridas</span><span class="price-row__dots" aria-hidden="true"></span><strong>$30.000</strong></li>
+            <li class="price-row" data-service="Foxy curva marcada" data-price="30000"><span>Foxy curva marcada</span><span class="price-row__dots" aria-hidden="true"></span><strong>$30.000</strong></li>
+            <li class="price-row" data-service="Volumen 4D" data-price="31000"><span>Volumen 4D</span><span class="price-row__dots" aria-hidden="true"></span><strong>$31.000</strong></li>
+            <li class="price-row" data-service="Closed fans" data-price="31000"><span>Closed fans</span><span class="price-row__dots" aria-hidden="true"></span><strong>$31.000</strong></li>
+            <li class="price-row" data-service="Volumen americano" data-price="32000"><span>Volumen americano</span><span class="price-row__dots" aria-hidden="true"></span><strong>$32.000</strong></li>
+          </ul>
+
+          <ul class="tabs__panel prices" id="panel-tech" role="tabpanel" aria-labelledby="tab-tech" hidden>
+            <li class="price-row" data-service="Efecto natural 4D" data-price="31000"><span>Efecto natural 4D</span><span class="price-row__dots" aria-hidden="true"></span><strong>$31.000</strong></li>
+            <li class="price-row" data-service="Efecto rímel tech" data-price="31000"><span>Efecto rímel tech</span><span class="price-row__dots" aria-hidden="true"></span><strong>$31.000</strong></li>
+            <li class="price-row" data-service="Efecto medio 5D o foxy" data-price="32000"><span>Efecto medio 5D o foxy</span><span class="price-row__dots" aria-hidden="true"></span><strong>$32.000</strong></li>
+            <li class="price-row" data-service="Efecto closed fans" data-price="33000"><span>Efecto closed fans</span><span class="price-row__dots" aria-hidden="true"></span><strong>$33.000</strong></li>
+            <li class="price-row" data-service="Efecto tupido 6D" data-price="33000"><span>Efecto tupido 6D</span><span class="price-row__dots" aria-hidden="true"></span><strong>$33.000</strong></li>
+          </ul>
+
+          <ul class="tabs__panel prices" id="panel-natural" role="tabpanel" aria-labelledby="tab-natural" hidden>
+            <li class="price-row" data-service="Efecto natural extensiones cafés" data-price="29000"><span>Efecto natural extensiones cafés</span><span class="price-row__dots" aria-hidden="true"></span><strong>$29.000</strong></li>
+            <li class="price-row" data-service="Volumen 3D naturales cafés" data-price="29000"><span>Volumen 3D naturales cafés</span><span class="price-row__dots" aria-hidden="true"></span><strong>$29.000</strong></li>
+            <li class="price-row" data-service="Efecto máscara rímel" data-price="30000"><span>Efecto máscara rímel</span><span class="price-row__dots" aria-hidden="true"></span><strong>$30.000</strong></li>
+          </ul>
+        </div>
+        <p class="promo">Con cualquier servicio de pestañas, <strong>$2.000 OFF en cejas</strong>.</p>
+      </div>
+
+      <div class="demo">
+        <h3 class="demo__title">Aparición al bajar</h3>
+        <p class="demo__note">Las tarjetas aparecen a medida que llegas a ellas.</p>
+        <ul class="cards" role="list">
+          <li class="card reveal">
+            <h4>Pestañas</h4>
+            <p>Volumen clásico, tecnológico y efectos naturales.</p>
+          </li>
+          <li class="card card--purple reveal">
+            <h4>Uñas</h4>
+            <p>Manicura con nivelación, con o sin diseño.</p>
+          </li>
+          <li class="card card--green reveal">
+            <h4>Cejas</h4>
+            <p>Perfilado con visagismo.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block block--questions" aria-labelledby="questions-title">
+      <h2 id="questions-title">Lo que necesitamos saber de ti</h2>
+      <ol>
+        <li>¿El logo se parece al tuyo? ¿Qué le cambiarías?</li>
+        <li>¿Te gustan los colores? ¿Alguno no te representa?</li>
+        <li>¿Qué letra prefieres para el logo y cuál para los textos?</li>
+        <li>¿Las animaciones te parecen bien, poco o demasiado?</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Lovely Chile · Prototipo P0 · Octubre 2026</p>
+  </footer>
+</body>
+</html>
