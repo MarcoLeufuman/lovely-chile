@@ -1,6 +1,32 @@
 /* Tokens de marca, reset y tipografía base.
    Los colores "strong" existen porque el rosa y el verde originales
    no alcanzan contraste AA con texto chico (3,5:1 y 2,6:1 sobre blanco). */
+
+/* swap: el texto se muestra altiro con la fuente del sistema y cambia cuando llega la propia */
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito-variable-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/pacifico-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../fonts/dancing-script-700-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-pink: #ff2e93;
   --color-pink-strong: #d6006f;
